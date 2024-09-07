@@ -87,6 +87,92 @@
       width: 100%;
     }
   }
+  
+  header {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  #banner {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2rem;
+    padding:  1rem;
+  }
+  
+  #banner #eslogan {
+    width: 100%; 
+    max-width: 600px;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  #banner img {
+    max-width: 100%; 
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    #banner {
+      flex-direction: column; 
+    }
+    
+    #DescripcionGeneral .contenedorDescripcion{
+        flex-direction: column;
+    }
 
+    #banner #eslogan {
+      text-align: center; 
+    }
+    
+    #DescripcionGeneral .contenedorDescripcion {
+        text-align: center; 
+    }
 
- 
+    #banner img {
+      width: 80%;
+    }
+    
+    #DescripcionGeneral img{
+        width: 80%;
+    }
+
+    .puntos{
+        width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #banner #eslogan {
+      font-size: 1rem; 
+    }
+  
+    #banner img {
+      width: 100%; 
+    }
+
+    #DescripcionGeneral img{
+        width: 100%;
+    }
+
+    .puntos{
+        width: 250px;
+    }
+  }
+  
+
+.contenedorDescripcion{
+    background-color: var(--principal);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;   
+}
+
+.puntos{
+    color: white;
+    width: 30rem;
+}
+
