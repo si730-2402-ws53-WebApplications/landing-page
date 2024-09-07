@@ -212,3 +212,48 @@ header {
   padding: 1rem;
 }
 
+
+
+#lanzar{
+  height: 15rem;
+  text-align: center;
+}
+
+button{
+  background-color:  var(--secundario);
+  border-style: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  color: white;
+}
+
+#registro{
+  background-color: var(--principal);
+  height: 30px;
+}
+
+img{
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+footer{
+  height: 5rem;
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  color: white;
+}
+
+#siguenos{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#siguenos img{
+  margin-left: 1rem;
+}
