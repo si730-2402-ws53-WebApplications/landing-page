@@ -104,7 +104,7 @@ header {
   justify-content: space-around;
   margin: 0;
   padding: 1rem;
-  background-image: url(https://si730-2402-ws53-webapplications.github.io/landing-page/img/banner.png);
+  background-image: url(https://raw.githubusercontent.com/si730-2402-ws53-WebApplications/landing-page/refs/heads/main/img/banner.png);
   background-size: cover;
   height: 30rem;
   background-color: rgba(255, 255, 255, 0.66);
