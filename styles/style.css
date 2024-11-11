@@ -3,6 +3,9 @@
   --secundario: #F04B4C;
 }
 
+section {
+  scroll-margin-top: 4rem; 
+}
 
 * {
   margin: 0;
@@ -21,6 +24,8 @@ nav {
   display: flex;
   height: 4rem;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
 }
 
 nav ul {
@@ -31,7 +36,7 @@ nav ul {
   align-items: center;
 }
 
-nav ul li a{
+nav ul li a {
   color: white;
 }
 
@@ -98,10 +103,11 @@ header {
   align-items: center;
   justify-content: space-around;
   margin: 0;
-  padding:  1rem;
+  padding: 1rem;
   background-image: url(https://si730-2402-ws53-webapplications.github.io/landing-page/img/banner.png);
-  height: 20rem;
-  background-color: rgba(255, 255, 255, 0.65);
+  background-size: cover;
+  height: 30rem;
+  background-color: rgba(255, 255, 255, 0.66);
   background-blend-mode: lighten;
 }
 
@@ -122,39 +128,40 @@ header {
     flex-direction: column; 
   }
   
-  #DescripcionGeneral .contenedorDescripcion{
-      flex-direction: column;
+
+  #DescripcionGeneral .contenedorDescripcion {
+    flex-direction: column;
+    text-align: center; 
+    gap: 2rem;
   }
 
   #Beneficios {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   #banner #eslogan {
     text-align: center; 
   }
-  
-  #DescripcionGeneral .contenedorDescripcion {
-      text-align: center; 
-  }
 
   #Beneficios .contenedorBeneficios {
-      text-align: center; 
+    text-align: center;
+    gap: 2rem; 
   }
 
   #banner img {
     width: 80%;
   }
-  #Beneficios img{
-      width: 20%;
+  
+  #Beneficios img {
+    width: 20%;
   }
   
-  #DescripcionGeneral img{
-      width: 80%;
+  #DescripcionGeneral img {
+    width: 80%;
   }
 
-  .puntos{
-      width: 80%;
+  .puntos {
+    width: 80%;
   }
 }
 
@@ -167,63 +174,131 @@ header {
     width: 100%; 
   }
 
-  #Beneficios img{
-      width: 20%;
+  #Beneficios img {
+    width: 20%;
   }
   
-  #DescripcionGeneral img{
-      width: 100%;
+  #DescripcionGeneral img {
+    width: 100%;
   }
 
-  .puntos{
-      width: 250px;
+  .puntos {
+    width: 250px;
   }
 }
 
+@media (max-width: 1097px) {
+  #DescripcionGeneral .contenedorDescripcion {
+    flex-direction: column;
+    text-align: center; 
+    gap: 2rem;
+  }
+  .contenedorDescripcion {
+    flex-direction: column; /* Stack in column layout on smaller screens */
+    text-align: center;
+  }
 
-.contenedorDescripcion{
+  .contenedorDescripcion .puntos {
+    order: 1; /* Ensure text appears first */
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .contenedorDescripcion img {
+    width: 50%;
+    order: 2; /* Ensure image appears after text */
+  }
+}
+
+#DescripcionGeneral {
+  padding-top: 2rem;
   background-color: var(--principal);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2rem;   
+  padding-bottom: 5rem;
 }
 
-.puntos{
+.contenedorDescripcion {
+  margin: auto;
+  padding: 2rem; 
+  max-width: 67rem; 
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; /* Default layout for larger screens */
+}
+
+.puntos {
   color: white;
   width: 30rem;
 }
 
+@media (max-width: 768px) {
+  .contenedorDescripcion {
+    flex-direction: column; /* Stack in column layout on smaller screens */
+    text-align: center;
+  }
 
-#Beneficios{
+  .contenedorDescripcion .puntos {
+    order: 1; /* Ensure text appears first */
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .contenedorDescripcion img {
+    width: 80%;
+    order: 2; /* Ensure image appears after text */
+  }
+}
+
+#Beneficios {
   display: flex;
   align-items: center;
-  padding: 2rem;
+  justify-content: center;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
   background-color: lightgray;
 }
 
-.contenedorBeneficios img{
+.contenedorBeneficios {
+  margin: 1rem;
+  max-width: 25rem;
+  gap: 2rem;
+}
+
+.contenedorBeneficios img {
   justify-items: center;
 }
 
-
-#Nosotros{
-  padding: 2rem;
+#Nosotros {
+  padding: 3rem;
+  margin: auto;
+  max-width: 80rem;
 }
 
-#nosotrosHorizon{
+#nosotrosHorizon {
   padding: 1rem;
 }
 
+.nosotros_text {
+  max-width: 35rem;
+}
 
+#nosotros_ {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
 
-#lanzar{
+#lanzar {
   height: 15rem;
   text-align: center;
 }
 
-button{
-  background-color:  var(--secundario);
+button {
+  background-color: var(--secundario);
   border-style: none;
   height: 40px;
   width: 150px;
@@ -231,17 +306,17 @@ button{
   color: white;
 }
 
-#registro{
+#registro {
   background-color: var(--principal);
   height: 30px;
 }
 
-img{
+img {
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-footer{
+footer {
   height: 5rem;
   background-color: rgb(17, 17, 17);
   display: flex;
@@ -251,55 +326,55 @@ footer{
   color: white;
 }
 
-#siguenos{
+#siguenos {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-#siguenos img{
+#siguenos img {
   margin-left: 1rem;
 }
 
-.formulario{
-    background-color: var(--principal);
-    height:80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.formulario {
+  background-color: var(--principal);
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#Registrarse, #IniciarSesion{
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    border-radius: 10px;    
+#Registrarse, #IniciarSesion {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
-form button{
-    margin-left: 90px;
+form button {
+  margin-left: 90px;
 }
 
-
-input{
-    width: 20rem;
-    border-radius: 5px;
+input {
+  width: 20rem;
+  border-radius: 5px;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
   background-color: #fd2a2a;
 }
 
-nav img{
+nav img {
   box-shadow: none;
 }
 
-.contenedorBeneficios img{
+.contenedorBeneficios img {
   box-shadow: none;
+  width: 5rem;
 }
 
 .faq-section {
@@ -320,7 +395,7 @@ nav img{
 }
 
 .faq-answer {
-  display: none; /* Ocultar respuesta por defecto */
+  display: none;
   margin-top: 10px;
 }
 
@@ -331,7 +406,7 @@ nav img{
   border-radius: 4px;
 }
 
-.faq-container{
+.faq-container {
   max-width: 64rem;
   margin: auto;
 }
