@@ -1,31 +1,30 @@
 :root {
-  --principal: #213159;
-  --secundario: #F04B4C;
+  --principal: #213159; /* Define una variable CSS llamada 'principal' con el valor de color #213159 */
+  --secundario: #F04B4C; /* Define una variable CSS llamada 'secundario' con el valor de color #F04B4C */
 }
 
 section {
-  scroll-margin-top: 4rem; 
+  scroll-margin-top: 4rem; /* Establece un margen superior de 4rem para el desplazamiento de las secciones */
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; 
-  font-family: 'Sulphur Point', sans-serif;
+  margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+  padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total del elemento */
+  font-family: 'Sulphur Point', sans-serif; /* Establece la fuente predeterminada para todos los elementos */
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100vh; /* Establece una altura mínima del 100% de la altura de la ventana gráfica para el cuerpo */
 }
 
 nav {
-  background-color: rgb(17, 17, 17);
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  height: 4rem;
-  padding: 1rem;
-  position: fixed;
-  width: 100%;
+  background-color: rgb(17, 17, 17); /* Establece el color de fondo de la barra de navegación a un tono oscuro */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Aplica una sombra a la barra de navegación */
+  display: flex; /* Utiliza el modelo de caja flexible para la barra de navegación */
+  height: 4rem; /* Establece la altura de la barra de navegación a 4rem */
+  padding: 1rem; /* Aplica un relleno de 1rem alrededor del contenido de la barra de navegación */
+  position: fixed; /* Fija la barra de navegación en su posición, incluso cuando se desplaza la página */
 }
 
 nav ul {
